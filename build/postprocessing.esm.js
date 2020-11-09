@@ -1,6 +1,6 @@
 /**
- * postprocessing v6.18.0 build Mon Nov 09 2020
- * https://github.com/vanruesc/postprocessing
+ * @charliehess/postprocessing v6.18.0 build Mon Nov 09 2020
+ * https://github.com/charliehess/postprocessing
  * Copyright 2020 Raoul van Rüschen
  * @license Zlib
  */

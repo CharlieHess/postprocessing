@@ -66,7 +66,7 @@ const lib = {
 		external,
 		output: {
 			dir: "build",
-			entryFileNames: pkg.name + ".esm.js",
+			entryFileNames: "postprocessing.esm.js",
 			format: "esm",
 			banner
 		}
@@ -82,14 +82,14 @@ const lib = {
 		external,
 		output: [{
 			dir: "build",
-			entryFileNames: pkg.name + ".js",
+			entryFileNames: "postprocessing.js",
 			format: "umd",
 			name: pkg.name.replace(/-/g, "").toUpperCase(),
 			globals,
 			banner
 		}, {
 			dir: "build",
-			entryFileNames: pkg.name + ".min.js",
+			entryFileNames: "postprocessing.min.js",
 			format: "umd",
 			name: pkg.name.replace(/-/g, "").toUpperCase(),
 			plugins: [terser()],

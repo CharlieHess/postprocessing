@@ -1,13 +1,13 @@
 /**
- * postprocessing v6.18.0 build Mon Nov 09 2020
- * https://github.com/vanruesc/postprocessing
+ * @charliehess/postprocessing v6.18.0 build Mon Nov 09 2020
+ * https://github.com/charliehess/postprocessing
  * Copyright 2020 Raoul van Rüschen
  * @license Zlib
  */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('three')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'three'], factory) :
-	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.POSTPROCESSING = {}, global.THREE));
+	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['@CHARLIEHESS/POSTPROCESSING'] = {}, global.THREE));
 }(this, (function (exports, three) { 'use strict';
 
 	var ColorChannel = {
