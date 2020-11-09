@@ -53,7 +53,7 @@ const worker = {
 			format: "iife"
 		}
 	}
-}
+};
 
 const lib = {
 	module: {
@@ -99,40 +99,6 @@ const lib = {
 	}
 };
 
-const demo = {
-	module: {
-		input: "demo/src/index.js",
-		plugins: [
-			resolve(),
-			glsl(settings.glsl),
-			string(settings.string)
-		],
-		output: {
-			dir: "public/demo",
-			entryFileNames: "[name].js",
-			format: "esm"
-		}
-	},
-	main: {
-		input: production ? "public/demo/index.js" : "demo/src/index.js",
-		plugins: production ? [babel(settings.babel)] : [
-			resolve(),
-			glsl(settings.glsl),
-			string(settings.string)
-		],
-		output: [{
-			dir: "public/demo",
-			entryFileNames: "[name].js",
-			format: "iife"
-		}].concat(production ? [{
-			dir: "public/demo",
-			entryFileNames: "[name].min.js",
-			format: "iife",
-			plugins: [terser()]
-		}] : [])
-	}
-};
-
 export default [worker.smaa].concat(production ? [
-	lib.module, lib.main, demo.module, demo.main
-] : [demo.main]);
+	lib.module, lib.main
+] : []);
